@@ -35,6 +35,7 @@ function loadName(){
     } else {
         //he is
         paintGreeting(currentUser);
+        
     }
 }
 

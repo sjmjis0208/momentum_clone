@@ -2,6 +2,7 @@ const toDoForm = document.querySelector(".js-toDoForm"),
     toDoInput = toDoForm.querySelector("input"),
     toDoList = document.querySelector(".js-toDoList");
 
+
 const TODOS_LS = "toDos";
 
 let toDos = [];
@@ -60,6 +61,10 @@ function loadToDos(){
 }
 
 function init(){
+    //gretting.js
+    //if loadName showing todoform
+    if(localStorage.getItem(USER_LS))
+        toDoForm.classList.add(SHOWING_CN);
     loadToDos();
     toDoForm.addEventListener("submit", handleSubmit);
 }

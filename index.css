@@ -3,6 +3,10 @@ body{
    color: white;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .form,
 .greetings {
     display:none;
