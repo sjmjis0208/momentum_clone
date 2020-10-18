@@ -1,13 +1,12 @@
 ACCESS_KEY = "u-frOFerrhEwathJlrignRyp9zSzXHIGJnD_U0rJ1tk";
 UNSPLASH_URL = `https://api.unsplash.com/photos/random/?client_id=${ACCESS_KEY}&query=landscape&orientation=landscape`;
+AURL = "https://source.unsplash.com/random/?landscape"
 
 const body = document.querySelector("body");
 
 BG = "bg"
 
-function setBackGround(){
-    const savedDate
-}
+
 
 function saveBackGround(fullUrl, city, country, name){
     const savedImage = localStorage.getItem(BG);
@@ -27,7 +26,7 @@ function saveBackGround(fullUrl, city, country, name){
 }
 
 function getBackGround(){
-    fetch(UNSPLASH_URL)
+    fetch(AURL)
         .then(response => response.json())
         .then(json => {
             const image = json;

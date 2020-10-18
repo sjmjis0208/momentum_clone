@@ -45,11 +45,7 @@ function paintToDo(text){
 
 function handleSubmit(event){
     event.preventDefault();
-    const currentValue = toDoInput.value;
-    paintToDo(currentValue);
-    toDoInput.value = "";
-}
-
+    const currentValue = toDoInput.value; paintToDo(currentValue); toDoInput.value = ""; } 
 function loadToDos(){
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if(loadedToDos !== null){
@@ -60,7 +56,7 @@ function loadToDos(){
     } 
 }
 
-function init(){
+function toDoInit(){
     //gretting.js
     //if loadName showing todoform
     if(localStorage.getItem(USER_LS))
@@ -69,4 +65,4 @@ function init(){
     toDoForm.addEventListener("submit", handleSubmit);
 }
 
-init();
+toDoInit();
